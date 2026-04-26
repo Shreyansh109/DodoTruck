@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 3
   tags:
   - IcecreamOrder
+  - Customer
   layers:
   - Default
   - TransparentFX
