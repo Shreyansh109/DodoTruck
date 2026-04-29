@@ -6,14 +6,14 @@ using UnityEngine.InputSystem;
 
 public class Drive : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    
     float speedVar=20f;
     float stearing, speed;
+
     void Start()
     {
         
     }
-
     // Update is called once per frame
     void Update()
     {
@@ -26,7 +26,7 @@ public class Drive : MonoBehaviour
         }
         else if (Keyboard.current.sKey.isPressed)
         {
-            speed = speedVar*-1f;   
+            speed = speedVar*-1f;
         }
 
        if(Keyboard.current.aKey.isPressed && (Keyboard.current.wKey.isPressed || Keyboard.current.sKey.isPressed))
@@ -55,7 +55,6 @@ public class Drive : MonoBehaviour
         if(collision.gameObject.CompareTag("Bump"))
         {
             speedVar=20f;
-            Debug.Log("Bump!");
         }
     }
 }
