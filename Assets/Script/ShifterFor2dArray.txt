@@ -1,0 +1,32 @@
+// Online C# Editor for free
+// Write, Edit and Run your C# code using C# Online Compiler
+
+using System;
+
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        Shifter(2, new int[][] {
+                new int[] {1,2},
+                new int[] {3,4},
+                new int[] {5,6},
+                new int[] {7,8},
+                new int[] {9,0}
+            });
+    }
+    public static void Shifter(int desPos, int[][] array){
+        int[] temp1=array[desPos];
+        for(int i=desPos; i<array.Length-1; i++){
+            array[i] = array[i+1];
+        }
+        array[array.Length-1] = temp1;
+        
+        for(int i=0; i<array.Length; i++){
+            for(int j=0; j<2; j++)
+                Console.Write(array[i][j]+" ");
+                
+            Console.WriteLine();
+        }
+    }
+}

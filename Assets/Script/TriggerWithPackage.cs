@@ -7,6 +7,7 @@ public class TriggerWithPackage : MonoBehaviour
     bool order;
     [SerializeField] private float destroyDelay = 0.14f;
     private void OnTriggerEnter2D(Collider2D other) { 
+        Debug.Log("Trigger entered by: " + other.gameObject.name);
         if(other.CompareTag("IcecreamOrder") && !order){
             Destroy(other.gameObject, destroyDelay);
             GetComponent<ParticleSystem>().Play();
