@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5713319696645290263}
   - component: {fileID: 8563040541426226816}
   - component: {fileID: 7349230110498940977}
+  - component: {fileID: -5569844106494270956}
   m_Layer: 0
   m_Name: pickupitem_0
   m_TagString: IcecreamOrder
@@ -168,3 +169,16 @@ EdgeCollider2D:
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
   m_UseAdjacentEndPoint: 0
+--- !u!114 &-5569844106494270956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2222205371576847988}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ffe29ebe7745554d903d8af08ae702c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SpawnOrder
+  prefab: {fileID: 2222205371576847988}
