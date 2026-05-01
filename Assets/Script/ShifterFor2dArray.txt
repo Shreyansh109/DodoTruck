@@ -14,7 +14,7 @@ public class HelloWorld
     public static void Main(string[] args)
     {
         PlaceOject(2);
-        PlaceOject(3);
+        PlaceOject(4);
     }
     
     
@@ -34,6 +34,8 @@ public class HelloWorld
                 Shifter(selInd, Positions);
                 noAvailablePos--;
             }
+        }else{
+            PlaceOject(--noObjToPlace);
         }
         
     }
