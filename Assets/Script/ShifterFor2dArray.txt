@@ -2,19 +2,42 @@
 // Write, Edit and Run your C# code using C# Online Compiler
 
 using System;
+using System.Security.Cryptography;
 
 public class HelloWorld
 {
+    static int[][] Positions = new int[][] {new int[] {1,2}, new int[] {3,4}, new int[] {5,6}, new int[] {7,8}, new int[] {9,0}};
+    
+    static int noAvailablePos = 5; //number of available positions
+    
+    
     public static void Main(string[] args)
     {
-        Shifter(2, new int[][] {
-                new int[] {1,2},
-                new int[] {3,4},
-                new int[] {5,6},
-                new int[] {7,8},
-                new int[] {9,0}
-            });
+        PlaceOject(2);
+        PlaceOject(3);
     }
+    
+    
+    public static void PlaceOject(int noObjToPlace){
+        
+        // int[][] selectedPositions = new int[5][];
+        Random rnd = new Random();
+        int selInd;
+        int[] selPos;
+        if (noObjToPlace <= noAvailablePos){
+            for(int i = 0; i < noObjToPlace; i++){
+                selInd = rnd.Next(0,noAvailablePos); //select random valid index
+                selPos = Positions[selInd]; //insert element of the index
+                for(int j=0; j<2; j++){
+                    Console.WriteLine(selPos[j]);
+                }
+                Shifter(selInd, Positions);
+                noAvailablePos--;
+            }
+        }
+        
+    }
+    
     public static void Shifter(int desPos, int[][] array){
         int[] temp1=array[desPos];
         for(int i=desPos; i<array.Length-1; i++){
@@ -22,11 +45,11 @@ public class HelloWorld
         }
         array[array.Length-1] = temp1;
         
-        for(int i=0; i<array.Length; i++){
-            for(int j=0; j<2; j++)
-                Console.Write(array[i][j]+" ");
+        // for(int i=0; i<array.Length; i++){
+        //     for(int j=0; j<2; j++)
+        //         Console.Write(array[i][j]+" ");
                 
-            Console.WriteLine();
-        }
+        //     Console.WriteLine();
+        // }
     }
 }
