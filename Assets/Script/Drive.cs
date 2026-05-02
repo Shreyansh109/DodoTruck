@@ -7,7 +7,7 @@ using UnityEngine.InputSystem;
 public class Drive : MonoBehaviour
 {
     
-    float speedVar=20f;
+    float speedVar=10f;
     float stearing, speed;
 
     void Start()
@@ -45,7 +45,7 @@ public class Drive : MonoBehaviour
     {
         if(other.CompareTag("Boost"))
         {
-            speedVar=30f;
+            speedVar=20f;
             Destroy(other.gameObject, 0.14f);
         }
     }
