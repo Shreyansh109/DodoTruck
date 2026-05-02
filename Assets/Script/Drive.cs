@@ -54,7 +54,9 @@ public class Drive : MonoBehaviour
     {
         if(collision.gameObject.CompareTag("Bump"))
         {
-            speedVar=20f;
+            AudioSource audio = GameObject.Find("CarBump").GetComponent<AudioSource>();
+            audio.Play();
+            speedVar=10f;
         }
     }
 }
