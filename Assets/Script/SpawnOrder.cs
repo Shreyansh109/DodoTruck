@@ -5,7 +5,7 @@ public class SpawnOrder : MonoBehaviour
 
     static float[][] Positions = new float[][] {new float[] {19.703f,20.116f}, new float[] {-27.62f,-20.47f}, new float[] {-27.45f,18.002f}, new float[] {-48.43f,36.289f}, new float[] {1.358f,35.54f}};
     
-    static int noAvailablePos = 5; //number of available positions
+    public static int noAvailablePos = 5; //number of available positions
 
     public GameObject prefab;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -19,6 +19,10 @@ public class SpawnOrder : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(noAvailablePos > 2){
+            Debug.Log("Available Pos: "+noAvailablePos);
+            SpawnOject(noAvailablePos-2);
+        }
         
     }
 
@@ -45,18 +49,11 @@ public class SpawnOrder : MonoBehaviour
         
     }
 
-    public static void Shifter(int desPos, float[][] array){
+    private static void Shifter(int desPos, float[][] array){
         float[] temp1 = array[desPos];
         for(int i = desPos; i < array.Length-1; i++){
             array[i] = array[i+1];
         }
         array[array.Length-1] = temp1;
-        
-        // for(int i=0; i<array.Length; i++){
-        //     for(int j=0; j<2; j++)
-        //         Console.Write(array[i][j]+" ");
-                
-        //     Console.WriteLine();
-        // }
     }
 }
