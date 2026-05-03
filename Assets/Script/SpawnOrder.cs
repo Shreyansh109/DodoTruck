@@ -60,30 +60,10 @@ public class spawnOrder : MonoBehaviour
 
     private static void Shifter(int desPos, float[][] array){
         float[] temp1 = array[desPos];
-        //testing part
-        string result = "Pre Array: ";
-        for(int i = 0; i < array.Length; i++){
-            result += "{";
-            for(int j = 0; j < array[i].Length; j++){
-                result += array[i][j]+" ";
-            }
-            result += "} ";
-        }
-        Debug.Log(result);
-        //actual code
+
         for(int i = desPos; i < array.Length-1; i++){
             array[i] = array[i+1];
         }
         array[array.Length-1] = temp1;
-        //testing part
-        result = "Post Array: ";
-        for(int i = 0; i < array.Length; i++){
-            result += "{";
-            for(int j = 0; j < array[i].Length; j++){
-                result += array[i][j]+" ";
-            }
-            result += "} ";
-        }
-        Debug.Log(result);
     }
 }

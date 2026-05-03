@@ -5,10 +5,11 @@ using UnityEngine;
 public class TriggerWithPackage : MonoBehaviour
 {
     bool order;
-    OrderAssigner orderAssigner;
     Vector2 pos;
     public spawnOrder spawnOrder;
     [SerializeField] private float destroyDelay = 0.14f;
+    static string[][] Customers = new string[][] {new string[] {"CustomerCharecter2"}, new string[] {"CustomerCharacter_0"}, new string[] {"customerCharacter3_0"}};
+    public string[] selCus;
 
 
     private void OnTriggerEnter2D(Collider2D other) { 
@@ -19,10 +20,10 @@ public class TriggerWithPackage : MonoBehaviour
             audio.Play();
             order = true;
             pos = other.transform.position;
-            Debug.Log(spawnOrder.Positions+" "+ pos + " " + spawnOrder.noAvailablePos);
             OrderLeftShifter(spawnOrder.Positions, pos, spawnOrder.noAvailablePos);
+            SelectCustomer();
         }
-        if(order && other.CompareTag("Customer")){
+        if(order && other.gameObject.name.Contains(selCus[0])){
             Debug.Log("Package delivered!");
             ++spawnOrder.noAvailablePos;
             Debug.Log("Talking from Trigger: "+ spawnOrder.noAvailablePos);
@@ -52,5 +53,12 @@ public class TriggerWithPackage : MonoBehaviour
             array[ind] = temp;
         }
 
+    }
+
+    public void SelectCustomer(){
+        int selInd;
+        selInd =  UnityEngine.Random.Range(0, 3); //select random valid index
+        selCus = Customers[selInd]; //insert element of the index
+        Debug.Log("Selected Customer: "+selCus[0]);
     }
 }
