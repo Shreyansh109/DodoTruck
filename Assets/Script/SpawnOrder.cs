@@ -1,37 +1,44 @@
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 
-public class SpawnOrder : MonoBehaviour
+public class spawnOrder : MonoBehaviour
 {
 
-    static float[][] Positions = new float[][] {new float[] {19.703f,20.116f}, new float[] {-27.62f,-20.47f}, new float[] {-27.45f,18.002f}, new float[] {-48.43f,36.289f}, new float[] {1.358f,35.54f}};
-    
-    public static int noAvailablePos = 5; //number of available positions
+    public float[][] Positions = new float[][] {new float[] {19.703f,20.116f}, new float[] {-27.62f,-20.47f}, new float[] {-27.45f,18.002f}, new float[] {-48.43f,36.289f}, new float[] {1.358f,35.54f}, new float[] {-56.1f,-0.692f}};
+    float[] selPos;
+    public int noAvailablePos = 6; //number of available positions
 
     public GameObject prefab;
+
+    public Light2D light1;
+    public Light2D light2;
+    public Light2D light3;
+
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
 
         SpawnOject(3);
+        light1.intensity = 0.5f;
+        light2.intensity = 2f;
+        light3.intensity = 3f;
         
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(noAvailablePos > 2){
-            Debug.Log("Available Pos: "+noAvailablePos);
-            SpawnOject(noAvailablePos-2);
+        if(noAvailablePos > 3){
+            SpawnOject(noAvailablePos-3);
         }
         
     }
 
     public void SpawnOject(int noObjToPlace){
         
-        
-        // int[][] selectedPositions = new int[5][];
         int selInd;
-        float[] selPos;
+        
         if (noObjToPlace <= noAvailablePos){
             for(int i = 0; i < noObjToPlace; i++){
                 selInd =  UnityEngine.Random.Range(0, noAvailablePos); //select random valid index
@@ -41,7 +48,9 @@ public class SpawnOrder : MonoBehaviour
                 Instantiate(prefab, spawnPosition, Quaternion.identity);
                 
                 Shifter(selInd, Positions);
-                noAvailablePos--;
+                Debug.Log("Pre Available Pos: "+noAvailablePos);
+                --noAvailablePos;
+                Debug.Log("Post Available Pos: "+noAvailablePos);
             }
         }else{
             SpawnOject(--noObjToPlace);
@@ -51,9 +60,30 @@ public class SpawnOrder : MonoBehaviour
 
     private static void Shifter(int desPos, float[][] array){
         float[] temp1 = array[desPos];
+        //testing part
+        string result = "Pre Array: ";
+        for(int i = 0; i < array.Length; i++){
+            result += "{";
+            for(int j = 0; j < array[i].Length; j++){
+                result += array[i][j]+" ";
+            }
+            result += "} ";
+        }
+        Debug.Log(result);
+        //actual code
         for(int i = desPos; i < array.Length-1; i++){
             array[i] = array[i+1];
         }
         array[array.Length-1] = temp1;
+        //testing part
+        result = "Post Array: ";
+        for(int i = 0; i < array.Length; i++){
+            result += "{";
+            for(int j = 0; j < array[i].Length; j++){
+                result += array[i][j]+" ";
+            }
+            result += "} ";
+        }
+        Debug.Log(result);
     }
 }

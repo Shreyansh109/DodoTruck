@@ -25883,6 +25883,7 @@ GameObject:
   - component: {fileID: 819564369}
   - component: {fileID: 819564373}
   - component: {fileID: 819564372}
+  - component: {fileID: 819564375}
   m_Layer: 0
   m_Name: TruckContainer
   m_TagString: Untagged
@@ -30825,6 +30826,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f019008f6e621842aa9f3ac05ca333b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AudioController
+--- !u!114 &819564375
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 819564366}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0128c09a7be8ccc42afd041739a052d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::OrderAssigner
+  selCus: []
+  orderAssigned: 0
 --- !u!1 &819919024
 GameObject:
   m_ObjectHideFlags: 0
@@ -48522,6 +48537,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpawnOrder
   prefab: {fileID: 2222205371576847988, guid: b0c9299e4a1bb3048b2698622b1c06f1, type: 3}
+  light1: {fileID: 1008755626}
+  light2: {fileID: 695115800}
+  light3: {fileID: 1692057266}
 --- !u!4 &1389322839
 Transform:
   m_ObjectHideFlags: 0
