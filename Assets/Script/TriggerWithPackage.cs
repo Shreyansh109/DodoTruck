@@ -9,10 +9,10 @@ public class TriggerWithPackage : MonoBehaviour
     Vector2 pos;
     public spawnOrder spawnOrder;
     [SerializeField] private float destroyDelay = 0.14f;
-    AudioSource audio = GameObject.Find("PickupAudio").GetComponent<AudioSource>();
 
 
     private void OnTriggerEnter2D(Collider2D other) { 
+        AudioSource audio = GameObject.Find("PickupAudio").GetComponent<AudioSource>();
         if(other.CompareTag("IcecreamOrder") && !order){
             Destroy(other.gameObject, destroyDelay);
             GetComponent<ParticleSystem>().Play();
