@@ -14,6 +14,7 @@ public class TriggerWithPackage : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other) { 
         AudioSource audio = GameObject.Find("PickupAudio").GetComponent<AudioSource>();
+        AudioSource audio2 = GameObject.Find("OrderDelivered").GetComponent<AudioSource>();
         if(other.CompareTag("IcecreamOrder") && !order){
             Destroy(other.gameObject, destroyDelay);
             GetComponent<ParticleSystem>().Play();
@@ -28,6 +29,7 @@ public class TriggerWithPackage : MonoBehaviour
             ++spawnOrder.noAvailablePos;
             Debug.Log("Talking from Trigger: "+ spawnOrder.noAvailablePos);
             GetComponent<ParticleSystem>().Stop();
+            audio2.Play();
             order = false;
         }
     }

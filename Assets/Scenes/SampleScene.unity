@@ -26095,8 +26095,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abcabae6929e7a940a77bf26bc01402d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TriggerWithPackage
-  spawnOrder: {fileID: 0}
+  spawnOrder: {fileID: 1389322838}
   destroyDelay: 0.14
+  selCus: []
 --- !u!199 &819564372
 ParticleSystemRenderer:
   serializedVersion: 7
