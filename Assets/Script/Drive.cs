@@ -7,7 +7,7 @@ using UnityEngine.InputSystem;
 public class Drive : MonoBehaviour
 {
     
-    float speedVar=10f;
+    float speedVar=12f;
     float stearing, speed;
 
     void Start()
@@ -45,6 +45,8 @@ public class Drive : MonoBehaviour
     {
         if(other.CompareTag("Boost"))
         {
+            AudioSource audio = GameObject.Find("BoostAudio").GetComponent<AudioSource>();
+            audio.Play();
             speedVar=20f;
             Destroy(other.gameObject, 0.14f);
         }
@@ -56,7 +58,7 @@ public class Drive : MonoBehaviour
         {
             AudioSource audio = GameObject.Find("CarBump").GetComponent<AudioSource>();
             audio.Play();
-            speedVar=10f;
+            speedVar=12f;
         }
     }
 }
