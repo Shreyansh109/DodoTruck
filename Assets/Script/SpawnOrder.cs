@@ -48,9 +48,7 @@ public class spawnOrder : MonoBehaviour
                 Instantiate(prefab, spawnPosition, Quaternion.identity);
                 
                 Shifter(selInd, Positions);
-                Debug.Log("Pre Available Pos: "+noAvailablePos);
                 --noAvailablePos;
-                Debug.Log("Post Available Pos: "+noAvailablePos);
             }
         }else{
             SpawnOject(--noObjToPlace);

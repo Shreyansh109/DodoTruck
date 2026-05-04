@@ -27,7 +27,6 @@ public class TriggerWithPackage : MonoBehaviour
         if(order && other.gameObject.name.Contains(selCus[0])){
             Debug.Log("Package delivered!");
             ++spawnOrder.noAvailablePos;
-            Debug.Log("Talking from Trigger: "+ spawnOrder.noAvailablePos);
             GetComponent<ParticleSystem>().Stop();
             audio2.Play();
             order = false;
