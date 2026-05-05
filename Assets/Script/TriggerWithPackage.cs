@@ -1,6 +1,7 @@
 using JetBrains.Annotations;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 
 public class TriggerWithPackage : MonoBehaviour
 {
@@ -8,7 +9,7 @@ public class TriggerWithPackage : MonoBehaviour
     Vector2 pos;
     public spawnOrder spawnOrder;
     [SerializeField] private float destroyDelay = 0.14f;
-    static string[][] Customers = new string[][] {new string[] {"CustomerCharecter2"}, new string[] {"CustomerCharacter_0"}, new string[] {"customerCharacter3_0"}};
+    static string[][] Customers = new string[][] {new string[] {"CustomerCharecter2","Sprite Light 2D (2)"}, new string[] {"CustomerCharacter_0","Sprite Light 2D (1)"}, new string[] {"customerCharacter3_0","Sprite Light 2D (3)"}};
     public string[] selCus;
 
 
@@ -23,6 +24,9 @@ public class TriggerWithPackage : MonoBehaviour
             pos = other.transform.position;
             OrderLeftShifter(spawnOrder.Positions, pos, spawnOrder.noAvailablePos);
             SelectCustomer();
+            Light2D light = GameObject.Find(selCus[1]).GetComponent<Light2D>();
+            Debug.Log(light.name);
+            light.intensity = 3f;
         }
         if(order && other.gameObject.name.Contains(selCus[0])){
             Debug.Log("Package delivered!");
@@ -30,6 +34,8 @@ public class TriggerWithPackage : MonoBehaviour
             GetComponent<ParticleSystem>().Stop();
             audio2.Play();
             order = false;
+            Light2D light = GameObject.Find(selCus[1]).GetComponent<Light2D>();
+            light.intensity = 0f;
         }
     }
 

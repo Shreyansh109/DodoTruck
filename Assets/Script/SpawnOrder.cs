@@ -10,21 +10,9 @@ public class spawnOrder : MonoBehaviour
 
     public GameObject prefab;
 
-    public Light2D light1;
-    public Light2D light2;
-    public Light2D light3;
-
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
 
-        SpawnOject(3);
-        light1.intensity = 0.5f;
-        light2.intensity = 2f;
-        light3.intensity = 3f;
-        
-    }
 
     // Update is called once per frame
     void Update()
