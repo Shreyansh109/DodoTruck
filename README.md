@@ -1,24 +1,20 @@
-Here’s a **clean, minimal, and focused version** of your README with only essential information:
-
----
-
-# DodoTruck
+# 🚚 DodoTruck
 
 A top-down 2D endless delivery game built with Unity 6.3 LTS.
 
 ---
 
-## Overview
+## 🧭 Overview
 
 **DodoTruck** is an endless delivery game where players drive a truck to pick up and deliver orders across a multi-zone world.
 
-* No win condition continuous gameplay loop
+* No win condition — continuous gameplay loop
 * Orders spawn randomly across the map
 * Focus on exploration, navigation, and speed management
 
 ---
 
-##  Core Gameplay
+## 🎮 Core Gameplay
 
 **Loop:**
 `Explore → Find Order → Pickup → Deliver → Repeat`
@@ -33,7 +29,33 @@ A top-down 2D endless delivery game built with Unity 6.3 LTS.
 
 ---
 
-##  Tech Stack
+## 📸 Screenshots
+
+### 🚧 Crossroad Navigation (Low Visibility)
+![Crossroad Gameplay](SceneSS\Screenshot (339).png)
+*Truck navigating a dark intersection with limited light radius.*
+
+---
+
+### 🌲 Forest Zone Exploration
+![Forest Zone](SceneSS\Screenshot (340).png)
+*Dense forest area with obstacles and restricted movement space.*
+
+---
+
+### 📦 Order Pickup Event
+![Order Pickup](SceneSS\Screenshot (341).png)
+*Player approaching an order location marked with visual indicators.*
+
+---
+
+### 🏠 Delivery in Village Zone
+![Delivery Zone](SceneSS\Screenshot (342).png)
+*Delivering order to NPC house in the village area.*
+
+---
+
+## 🛠️ Tech Stack
 
 * **Engine:** Unity 6.3 LTS (`6000.3.13f1`)
 * **Language:** C#
@@ -43,7 +65,7 @@ A top-down 2D endless delivery game built with Unity 6.3 LTS.
 
 ---
 
-##  Getting Started
+## 🚀 Getting Started
 
 ### Requirements
 
@@ -56,37 +78,3 @@ A top-down 2D endless delivery game built with Unity 6.3 LTS.
 ```bash
 git clone https://github.com/YOUR_USERNAME/DodoTruck.git
 cd DodoTruck
-```
-
-Open in Unity Hub → Load project → Open:
-
-```
-Assets/Scenes/SampleScene.unity
-```
-
-Press ▶ Play to run.
-
----
-
-## 🗂️ Project Structure
-
-```
-Assets/
-├── Scenes/        # Main scene
-├── Scripts/       # Game logic (Truck, Orders, World, UI)
-├── Prefabs/       # Reusable objects
-├── Sprites/       # Art assets
-├── Tilemaps/      # Zone tiles
-└── Lighting/      # Light settings
-```
-
----
-
-##  Features
-
-* Endless gameplay loop
-* Random order spawning
-* Speed boost system
-* Collision penalty system
-* Zone-based world design
-* 2D lighting & visibility zones
