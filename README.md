@@ -1,20 +1,20 @@
-# 🚚 DodoTruck
+# DodoTruck
 
 A top-down 2D endless delivery game built with Unity 6.3 LTS.
 
 ---
 
-## 🧭 Overview
+## Overview
 
 **DodoTruck** is an endless delivery game where players drive a truck to pick up and deliver orders across a multi-zone world.
 
-* No win condition — continuous gameplay loop
+* No win condition continuous gameplay loop
 * Orders spawn randomly across the map
 * Focus on exploration, navigation, and speed management
 
 ---
 
-## 🎮 Core Gameplay
+## Core Gameplay
 
 **Loop:**
 `Explore → Find Order → Pickup → Deliver → Repeat`
@@ -29,7 +29,7 @@ A top-down 2D endless delivery game built with Unity 6.3 LTS.
 
 ---
 
-## 📸 Screenshots
+## Screenshots
 
 ### 🚧 Crossroad Navigation (Low Visibility)
 ![Crossroad Gameplay](SceneSS/Screenshot1.png)
@@ -55,7 +55,7 @@ A top-down 2D endless delivery game built with Unity 6.3 LTS.
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 * **Engine:** Unity 6.3 LTS (`6000.3.13f1`)
 * **Language:** C#
@@ -65,7 +65,7 @@ A top-down 2D endless delivery game built with Unity 6.3 LTS.
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Requirements
 
