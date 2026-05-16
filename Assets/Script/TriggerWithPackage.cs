@@ -9,8 +9,16 @@ public class TriggerWithPackage : MonoBehaviour
     Vector2 pos;
     public spawnOrder spawnOrder;
     [SerializeField] private float destroyDelay = 0.14f;
-    static string[][] Customers = new string[][] {new string[] {"CustomerCharecter2","Sprite Light 2D (2)"}, new string[] {"CustomerCharacter_0","Sprite Light 2D (1)"}, new string[] {"customerCharacter3_0","Sprite Light 2D (3)"}};
+    static string[][] Customers = new string[][] {new string[] {"James","Sprite Light 2D (2)"}, new string[] {"Mike","Sprite Light 2D (1)"}, new string[] {"Boo","Sprite Light 2D (3)"}};
     public string[] selCus;
+    int score = 0;
+    TextUI_Manager textUI_Manager;
+
+     void Start()
+    {
+        textUI_Manager = FindFirstObjectByType<TextUI_Manager>();
+        textUI_Manager = FindFirstObjectByType<TextUI_Manager>();
+    }
 
 
     private void OnTriggerEnter2D(Collider2D other) { 
@@ -36,6 +44,8 @@ public class TriggerWithPackage : MonoBehaviour
             order = false;
             Light2D light = GameObject.Find(selCus[1]).GetComponent<Light2D>();
             light.intensity = 0f;
+            textUI_Manager.DisplayCustomerName("___");
+            textUI_Manager.DisplayPlayerScore(++score);
         }
     }
 
@@ -62,10 +72,10 @@ public class TriggerWithPackage : MonoBehaviour
 
     }
 
-    public void SelectCustomer(){
+    void SelectCustomer(){
         int selInd;
         selInd =  UnityEngine.Random.Range(0, 3); //select random valid index
         selCus = Customers[selInd]; //insert element of the index
-        Debug.Log("Selected Customer: "+selCus[0]);
+        textUI_Manager.DisplayCustomerName(selCus[0]);
     }
 }
