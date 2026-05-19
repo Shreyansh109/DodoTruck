@@ -1305,8 +1305,8 @@ MonoBehaviour:
   m_LightType: 3
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
-  m_Color: {r: 0.86415094, g: 0.7578984, b: 0.5592524, a: 1}
-  m_Intensity: 1
+  m_Color: {r: 0.86415094, g: 0.7578984, b: 0.5592524, a: 0.72156864}
+  m_Intensity: 0.86
   m_LightVolumeIntensity: 1
   m_LightVolumeEnabled: 0
   m_ApplyToSortingLayers: 00000000
@@ -2607,8 +2607,8 @@ MonoBehaviour:
   m_LightType: 3
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
-  m_Color: {r: 0.86415094, g: 0.7578984, b: 0.5592524, a: 1}
-  m_Intensity: 1
+  m_Color: {r: 0.86415094, g: 0.7578984, b: 0.5592524, a: 0.72156864}
+  m_Intensity: 0.86
   m_LightVolumeIntensity: 1
   m_LightVolumeEnabled: 0
   m_ApplyToSortingLayers: 00000000
@@ -5230,8 +5230,8 @@ MonoBehaviour:
   m_LightType: 3
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
-  m_Color: {r: 0.86415094, g: 0.7578984, b: 0.5592524, a: 1}
-  m_Intensity: 1
+  m_Color: {r: 0.86415094, g: 0.7578984, b: 0.5592524, a: 0.72156864}
+  m_Intensity: 0.86
   m_LightVolumeIntensity: 1
   m_LightVolumeEnabled: 0
   m_ApplyToSortingLayers: 00000000
@@ -6582,8 +6582,8 @@ MonoBehaviour:
   m_LightType: 3
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
-  m_Color: {r: 0.86415094, g: 0.7578984, b: 0.5592524, a: 1}
-  m_Intensity: 1
+  m_Color: {r: 0.86415094, g: 0.7578984, b: 0.5592524, a: 0.72156864}
+  m_Intensity: 0.86
   m_LightVolumeIntensity: 1
   m_LightVolumeEnabled: 0
   m_ApplyToSortingLayers: 00000000
@@ -15562,8 +15562,8 @@ MonoBehaviour:
   m_LightType: 3
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
-  m_Color: {r: 0.86415094, g: 0.7578984, b: 0.5592524, a: 1}
-  m_Intensity: 1
+  m_Color: {r: 0.86415094, g: 0.7578984, b: 0.5592524, a: 0.72156864}
+  m_Intensity: 0.86
   m_LightVolumeIntensity: 1
   m_LightVolumeEnabled: 0
   m_ApplyToSortingLayers: 00000000
@@ -19684,8 +19684,8 @@ MonoBehaviour:
   m_LightType: 3
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
-  m_Color: {r: 0.86415094, g: 0.7578984, b: 0.5592524, a: 1}
-  m_Intensity: 1
+  m_Color: {r: 0.86415094, g: 0.7578984, b: 0.5592524, a: 0.72156864}
+  m_Intensity: 0.86
   m_LightVolumeIntensity: 1
   m_LightVolumeEnabled: 0
   m_ApplyToSortingLayers: 00000000
@@ -26484,6 +26484,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TriggerWithPackage
   spawnOrder: {fileID: 1389322838}
   destroyDelay: 0.14
+  scoreContainer: {fileID: 11400000, guid: 5a6a6d4c34fbefb439f45298e486997d, type: 2}
   selCus: []
 --- !u!199 &819564372
 ParticleSystemRenderer:
@@ -35383,8 +35384,8 @@ MonoBehaviour:
   m_LightType: 3
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
-  m_Color: {r: 0.86415094, g: 0.7578984, b: 0.5592524, a: 1}
-  m_Intensity: 1
+  m_Color: {r: 0.86415094, g: 0.7578984, b: 0.5592524, a: 0.72156864}
+  m_Intensity: 0.86
   m_LightVolumeIntensity: 1
   m_LightVolumeEnabled: 0
   m_ApplyToSortingLayers: 00000000
@@ -36829,8 +36830,8 @@ MonoBehaviour:
   m_LightType: 3
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
-  m_Color: {r: 0.86415094, g: 0.7578984, b: 0.5592524, a: 1}
-  m_Intensity: 1
+  m_Color: {r: 0.86415094, g: 0.7578984, b: 0.5592524, a: 0.72156864}
+  m_Intensity: 0.86
   m_LightVolumeIntensity: 1
   m_LightVolumeEnabled: 0
   m_ApplyToSortingLayers: 00000000
@@ -37324,8 +37325,8 @@ MonoBehaviour:
   m_LightType: 3
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
-  m_Color: {r: 0.86415094, g: 0.7578984, b: 0.5592524, a: 1}
-  m_Intensity: 1
+  m_Color: {r: 0.86415094, g: 0.7578984, b: 0.5592524, a: 0.72156864}
+  m_Intensity: 0.86
   m_LightVolumeIntensity: 1
   m_LightVolumeEnabled: 0
   m_ApplyToSortingLayers: 00000000
@@ -56841,8 +56842,8 @@ MonoBehaviour:
   m_LightType: 3
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
-  m_Color: {r: 0.86415094, g: 0.7578984, b: 0.5592524, a: 1}
-  m_Intensity: 1
+  m_Color: {r: 0.86415094, g: 0.7578984, b: 0.5592524, a: 0.72156864}
+  m_Intensity: 0.86
   m_LightVolumeIntensity: 1
   m_LightVolumeEnabled: 0
   m_ApplyToSortingLayers: 00000000
@@ -59992,8 +59993,8 @@ MonoBehaviour:
   m_LightType: 3
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
-  m_Color: {r: 0.86415094, g: 0.7578984, b: 0.5592524, a: 1}
-  m_Intensity: 1
+  m_Color: {r: 0.86415094, g: 0.7578984, b: 0.5592524, a: 0.72156864}
+  m_Intensity: 0.86
   m_LightVolumeIntensity: 1
   m_LightVolumeEnabled: 0
   m_ApplyToSortingLayers: 00000000
@@ -60349,8 +60350,8 @@ MonoBehaviour:
   m_LightType: 3
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
-  m_Color: {r: 0.86415094, g: 0.7578984, b: 0.5592524, a: 1}
-  m_Intensity: 1
+  m_Color: {r: 0.86415094, g: 0.7578984, b: 0.5592524, a: 0.72156864}
+  m_Intensity: 0.86
   m_LightVolumeIntensity: 1
   m_LightVolumeEnabled: 0
   m_ApplyToSortingLayers: 00000000
@@ -69034,6 +69035,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TextUI_Manager
   customerNameText: {fileID: 1126732024}
   playerScore: {fileID: 692685511}
+  scoreContainer: {fileID: 11400000, guid: 5a6a6d4c34fbefb439f45298e486997d, type: 2}
 --- !u!1 &1971500064
 GameObject:
   m_ObjectHideFlags: 0

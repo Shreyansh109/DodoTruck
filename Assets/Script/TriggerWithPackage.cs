@@ -2,6 +2,7 @@ using JetBrains.Annotations;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class TriggerWithPackage : MonoBehaviour
 {
@@ -9,9 +10,9 @@ public class TriggerWithPackage : MonoBehaviour
     Vector2 pos;
     public spawnOrder spawnOrder;
     [SerializeField] private float destroyDelay = 0.14f;
+    [SerializeField] private ScoreContainer scoreContainer;
     static string[][] Customers = new string[][] {new string[] {"James","Sprite Light 2D (2)"}, new string[] {"Mike","Sprite Light 2D (1)"}, new string[] {"Boo","Sprite Light 2D (3)"}};
     public string[] selCus;
-    int score = 0;
     TextUI_Manager textUI_Manager;
 
      void Start()
@@ -45,7 +46,7 @@ public class TriggerWithPackage : MonoBehaviour
             Light2D light = GameObject.Find(selCus[1]).GetComponent<Light2D>();
             light.intensity = 0f;
             textUI_Manager.DisplayCustomerName("___");
-            textUI_Manager.DisplayPlayerScore(++score);
+            textUI_Manager.DisplayPlayerScore(++scoreContainer.PackageDelivered);
         }
     }
 
