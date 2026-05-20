@@ -12,4 +12,9 @@ public class BeginGame : MonoBehaviour
         inGameDetails.SetActive(true);
         gameObject.SetActive(false);
     }
+    public void ResetScore()
+    {
+        scoreContainer.PackageDelivered = 0;
+        Begin();
+    }
 }
