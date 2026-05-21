@@ -14,6 +14,7 @@ public class ChooseCarManager : MonoBehaviour
         gameObject.SetActive(false);
         preLoadScreen.SetActive(true);
         beginGame.GetComponent<BeginGame>().DisplaySelectedTruck();
+        beginGame.SelectedCar("Car1");
     }
 
     public void ChooseCar2(){
@@ -21,5 +22,6 @@ public class ChooseCarManager : MonoBehaviour
         gameObject.SetActive(false);
         preLoadScreen.SetActive(true);
         beginGame.GetComponent<BeginGame>().DisplaySelectedTruck();
+        beginGame.SelectedCar("Car2");
     }
 }

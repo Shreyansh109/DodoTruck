@@ -9002,6 +9002,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BeginGame
   scoreContainer: {fileID: 11400000, guid: 5a6a6d4c34fbefb439f45298e486997d, type: 2}
   truckContainer: {fileID: 819564366}
+  car1: {fileID: 177660423}
+  car2: {fileID: 477002877}
   selectedTruck: {fileID: 671327151}
   inGameDetails: {fileID: 1971159500}
   carSelection: {fileID: 829149696}
@@ -13913,7 +13915,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &477002878
 Transform:
   m_ObjectHideFlags: 0
