@@ -4,4 +4,5 @@ using UnityEngine;
 public class ScoreContainer : ScriptableObject
 {
     public int PackageDelivered = 0;
+    public Sprite truckImage;
 }

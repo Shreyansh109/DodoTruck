@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 826bc995a19ca0c469c7dc63f84160c2, type: 3}
   m_Name: ScoreContainer
   m_EditorClassIdentifier: Assembly-CSharp::ScoreContainer
-  PackageDelivered: 0
+  PackageDelivered: 1
+  truckImage: {fileID: 6630341104690361922, guid: 546457faf981d70448a52d04e121cbb1, type: 3}
