@@ -103,10 +103,10 @@ TextureImporter:
       name: RedDodoTruck-side_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 1
-        width: 1524
-        height: 1021
+        x: 5
+        y: 2
+        width: 1304
+        height: 620
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

@@ -17,7 +17,6 @@ public class BeginGame : MonoBehaviour
     void Start()
     {
         carSelected = scoreContainer.selectedCarName;
-        DisplaySelectedTruck();
     }
     public void DisplaySelectedTruck()
     {

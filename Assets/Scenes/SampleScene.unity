@@ -16719,7 +16719,7 @@ GameObject:
   - component: {fileID: 534609728}
   - component: {fileID: 534609727}
   m_Layer: 5
-  m_Name: Image
+  m_Name: SelectedCar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -41854,7 +41854,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 791.6706, y: -540}
+  m_AnchoredPosition: {x: 988.2232, y: -540}
   m_SizeDelta: {x: 510.86, y: 506.333}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1088627173
@@ -52120,7 +52120,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 263.8902, y: -540}
+  m_AnchoredPosition: {x: 329.40775, y: -540}
   m_SizeDelta: {x: 510.86, y: 506.333}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1412294654
@@ -53164,8 +53164,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 255.43, y: -240.6}
-  m_SizeDelta: {x: 561.022, y: 531.47}
+  m_AnchoredPosition: {x: 255.43, y: -253.17}
+  m_SizeDelta: {x: 491.44, y: 465.557}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1459222292
 MonoBehaviour:
@@ -65783,6 +65783,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1971159505}
+        m_TargetAssemblyTypeName: TextUI_Manager, Assembly-CSharp
+        m_MethodName: DisplaySelectedTruck
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1818643348
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -71287,6 +71299,7 @@ MonoBehaviour:
   customerNameText: {fileID: 1126732024}
   playerScore: {fileID: 692685511}
   scoreContainer: {fileID: 11400000, guid: 5a6a6d4c34fbefb439f45298e486997d, type: 2}
+  selectedTruck: {fileID: 534609725}
 --- !u!1 &1971500064
 GameObject:
   m_ObjectHideFlags: 0
