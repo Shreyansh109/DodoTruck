@@ -17,11 +17,11 @@ public class TailLight : MonoBehaviour
 
         if (Keyboard.current.wKey.isPressed || Keyboard.current.sKey.isPressed)
         {
-            tailLight.intensity = 0.75f;
+            tailLight.intensity = 0.2f;
         }
         else
         {
-            tailLight.intensity = 2.37f;
+            tailLight.intensity = 0.6f;
         }
     }
 }
