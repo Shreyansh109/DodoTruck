@@ -13,15 +13,15 @@ public class ChooseCarManager : MonoBehaviour
         scoreContainer.truckImage = car1;
         gameObject.SetActive(false);
         preLoadScreen.SetActive(true);
-        beginGame.GetComponent<BeginGame>().DisplaySelectedTruck();
-        beginGame.SelectedCar("Car1");
+        preLoadScreen.GetComponent<BeginGame>().DisplaySelectedTruck();
+        preLoadScreen.GetComponent<BeginGame>().SelectedCar("Car1");
     }
 
     public void ChooseCar2(){
         scoreContainer.truckImage = car2;
         gameObject.SetActive(false);
         preLoadScreen.SetActive(true);
-        beginGame.GetComponent<BeginGame>().DisplaySelectedTruck();
-        beginGame.SelectedCar("Car2");
+        preLoadScreen.GetComponent<BeginGame>().DisplaySelectedTruck();
+        preLoadScreen.GetComponent<BeginGame>().SelectedCar("Car2");
     }
 }
