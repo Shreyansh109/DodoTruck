@@ -1,10 +1,13 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GateOpener : MonoBehaviour
 {
     KeySpawner keySpawner;
     public GameObject gate;
     private bool gateLock = true;
+
+
     void Start()
     {
         keySpawner = FindFirstObjectByType<KeySpawner>();

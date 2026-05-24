@@ -2,6 +2,7 @@ using System.Data;
 using System.Data.Common;
 using JetBrains.Annotations;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.InputSystem;
 
 public class Drive : MonoBehaviour
@@ -9,6 +10,8 @@ public class Drive : MonoBehaviour
     
     float speedVar=12f;
     float stearing, speed;
+    public Image inGameDetailsCanvasPanel;
+
 
     void Start()
     {
@@ -60,6 +63,7 @@ public class Drive : MonoBehaviour
         }
         if(other.CompareTag("GateDetector"))
         {
+            inGameDetailsCanvasPanel.color = new Color32(0, 0, 0, 148);
             other.GetComponent<GateOpener>().SetGateLock(false);
         }
     }
