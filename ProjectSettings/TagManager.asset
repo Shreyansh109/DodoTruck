@@ -9,6 +9,7 @@ TagManager:
   - Bump
   - Boost
   - Wall
+  - Key
   layers:
   - Default
   - TransparentFX

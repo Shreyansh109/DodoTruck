@@ -14,11 +14,12 @@ public class TriggerWithPackage : MonoBehaviour
     static string[][] Customers = new string[][] {new string[] {"James","Sprite Light 2D (2)"}, new string[] {"Mike","Sprite Light 2D (1)"}, new string[] {"Boo","Sprite Light 2D (3)"}};
     public string[] selCus;
     TextUI_Manager textUI_Manager;
+    KeySpawner keySpawner;
 
      void Start()
     {
         textUI_Manager = FindFirstObjectByType<TextUI_Manager>();
-        textUI_Manager = FindFirstObjectByType<TextUI_Manager>();
+        keySpawner = FindFirstObjectByType<KeySpawner>();
     }
 
 
@@ -34,8 +35,15 @@ public class TriggerWithPackage : MonoBehaviour
             OrderLeftShifter(spawnOrder.Positions, pos, spawnOrder.noAvailablePos);
             SelectCustomer();
             Light2D light = GameObject.Find(selCus[1]).GetComponent<Light2D>();
-            Debug.Log(light.name);
             light.intensity = 3f;
+
+            GameObject[] keys = GameObject.FindGameObjectsWithTag("Key");
+            foreach (GameObject key in keys)
+            {
+                Destroy(key);
+            }
+            keySpawner.PositionPicker();
+
         }
         if(order && other.gameObject.name.Contains(selCus[0])){
             Debug.Log("Package delivered!");
@@ -47,6 +55,11 @@ public class TriggerWithPackage : MonoBehaviour
             light.intensity = 0f;
             textUI_Manager.DisplayCustomerName("___");
             textUI_Manager.DisplayPlayerScore(++scoreContainer.PackageDelivered);
+            GameObject[] keys = GameObject.FindGameObjectsWithTag("Key");
+            foreach (GameObject key in keys)
+            {
+                Destroy(key);
+            }
         }
     }
 

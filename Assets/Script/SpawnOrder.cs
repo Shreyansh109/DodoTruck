@@ -8,7 +8,7 @@ public class spawnOrder : MonoBehaviour
     float[] selPos;
     public int noAvailablePos = 6; //number of available positions
 
-    public GameObject prefab;
+    public GameObject icrecreamPrefab;
 
 
     void Update()
@@ -29,7 +29,7 @@ public class spawnOrder : MonoBehaviour
                 selPos = Positions[selInd]; //insert element of the index
                 
                 Vector2 spawnPosition = new Vector2(selPos[0], selPos[1]); // your desired position
-                Instantiate(prefab, spawnPosition, Quaternion.identity);
+                Instantiate(icrecreamPrefab, spawnPosition, Quaternion.identity);
                 
                 Shifter(selInd, Positions);
                 --noAvailablePos;

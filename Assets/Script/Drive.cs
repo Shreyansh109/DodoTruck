@@ -50,6 +50,12 @@ public class Drive : MonoBehaviour
             speedVar=20f;
             Destroy(other.gameObject, 0.14f);
         }
+        if(other.CompareTag("Key"))
+        {
+            KeySpawner keySpawner = FindFirstObjectByType<KeySpawner>();
+            keySpawner.KeyCollected();
+            Destroy(other.gameObject, 0.14f);
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
