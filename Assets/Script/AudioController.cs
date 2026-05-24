@@ -31,4 +31,20 @@ public class AudioController : MonoBehaviour
         //     audio2.Play();
         // }
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.CompareTag("Bump"))
+        {
+            AudioSource audio = GameObject.Find("CarBump").GetComponent<AudioSource>();
+            audio.Play();
+        }
+        else if(collision.gameObject.CompareTag("Wall"))
+        {
+            print("wall");
+            AudioSource audio = GameObject.Find("WallThump").GetComponent<AudioSource>();
+            audio.Play();
+        }
+    }
+    
 }

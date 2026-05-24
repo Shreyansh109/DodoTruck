@@ -6,6 +6,9 @@ TagManager:
   tags:
   - IcecreamOrder
   - Customer
+  - Bump
+  - Boost
+  - Wall
   layers:
   - Default
   - TransparentFX

@@ -54,10 +54,8 @@ public class Drive : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.CompareTag("Bump"))
+        if(collision.gameObject.CompareTag("Bump") || collision.gameObject.CompareTag("Wall"))
         {
-            AudioSource audio = GameObject.Find("CarBump").GetComponent<AudioSource>();
-            audio.Play();
             speedVar=12f;
         }
     }
