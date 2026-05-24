@@ -58,6 +58,10 @@ public class Drive : MonoBehaviour
             keySpawner.KeyCollected();
             Destroy(other.gameObject, 0.14f);
         }
+        if(other.CompareTag("GateDetector"))
+        {
+            other.GetComponent<GateOpener>().SetGateLock(true);
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

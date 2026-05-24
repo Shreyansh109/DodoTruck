@@ -23,4 +23,9 @@ public class KeySpawner : MonoBehaviour
         inGameDetailsCanvasPanel.color = new Color32(255, 215, 0, 148);
         print("Key Collected!");
     }
+
+    public bool IsKeyCollected()
+    {
+        return keyCollected;
+    }
 }

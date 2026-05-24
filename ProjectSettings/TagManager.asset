@@ -10,6 +10,7 @@ TagManager:
   - Boost
   - Wall
   - Key
+  - GateDetector
   layers:
   - Default
   - TransparentFX
