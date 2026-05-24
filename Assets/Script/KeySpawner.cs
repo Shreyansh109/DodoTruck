@@ -28,4 +28,9 @@ public class KeySpawner : MonoBehaviour
     {
         return keyCollected;
     }
+
+    public void SetKeyCollected(bool value)
+    {
+        keyCollected = value;
+    }
 }

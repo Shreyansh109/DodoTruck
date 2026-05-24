@@ -60,7 +60,7 @@ public class Drive : MonoBehaviour
         }
         if(other.CompareTag("GateDetector"))
         {
-            other.GetComponent<GateOpener>().SetGateLock(true);
+            other.GetComponent<GateOpener>().SetGateLock(false);
         }
     }
 
