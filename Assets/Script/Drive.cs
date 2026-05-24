@@ -52,6 +52,8 @@ public class Drive : MonoBehaviour
         }
         if(other.CompareTag("Key"))
         {
+            AudioSource audio = gameObject.GetComponent<AudioSource>();
+            audio.Play();
             KeySpawner keySpawner = FindFirstObjectByType<KeySpawner>();
             keySpawner.KeyCollected();
             Destroy(other.gameObject, 0.14f);
