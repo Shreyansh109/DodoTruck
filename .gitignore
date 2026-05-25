@@ -27,6 +27,7 @@ MemoryCaptures/
 # Cache
 *.cache
 
+*.lscache
 
 .utmp/
 /[Ll]ibrary/
