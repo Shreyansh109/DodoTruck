@@ -61,10 +61,15 @@ public class Drive : MonoBehaviour
             keySpawner.KeyCollected();
             Destroy(other.gameObject, 0.14f);
         }
-        if(other.CompareTag("GateDetector"))
+        else if(other.CompareTag("GateDetector"))
         {
             inGameDetailsCanvasPanel.color = new Color32(0, 0, 0, 148);
             other.GetComponent<GateOpener>().SetGateLock(false);
+            other.GetComponent<BackgroundMusicManager>().PlayUpper();
+        }
+        else if(other.CompareTag("UnderWorldDectector"))
+        {
+            other.GetComponent<BackgroundMusicManager>().PlayUnder();
         }
     }
 

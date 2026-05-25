@@ -11,6 +11,8 @@ TagManager:
   - Wall
   - Key
   - GateDetector
+  - Truck
+  - UnderWorldDectector
   layers:
   - Default
   - TransparentFX

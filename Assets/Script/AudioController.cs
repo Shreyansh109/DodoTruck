@@ -41,7 +41,6 @@ public class AudioController : MonoBehaviour
         }
         else if(collision.gameObject.CompareTag("Wall"))
         {
-            print("wall");
             AudioSource audio = GameObject.Find("WallThump").GetComponent<AudioSource>();
             audio.Play();
         }
