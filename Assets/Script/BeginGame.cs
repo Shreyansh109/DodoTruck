@@ -59,4 +59,9 @@ public class BeginGame : MonoBehaviour
     {
         scoreContainer.selectedCarName = name;
     }
+
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
 }
