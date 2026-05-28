@@ -53,6 +53,10 @@ A top-down 2D endless delivery game built with Unity 6.3 LTS.
 ![Delivery Zone](SceneSS/Screenshot4.png)
 *Delivering order to NPC house in the village area.*
 
+### 🗺️ Map
+![Delivery Zone](SceneSS/Screenshot5.png)
+*A full map of the game.*
+
 ---
 
 ## Tech Stack
